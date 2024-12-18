@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+android:layout_height="match_parent"
+android:layout_width="match_parent"
+android:fillViewport="true"
+xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="20dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+    tools:context=".NewActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="إضافة مندوب"
+        android:background="?btnSecondColor"
+        android:textSize="24dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:padding="5dp"
+        android:id="@+id/title1"
+        />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="15dp"
+           />
+
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="25dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="المنطقة:"
+            android:textSize="22dp"/>
+
+
+        <Spinner
+            android:layout_width="match_parent"
+            style="@style/spinnerList"
+            android:padding="20dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/regSpin"
+            android:layout_marginTop="5dp"
+            />
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_marginTop="18dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:endIconMode="clear_text"
+        android:hint="الرقم"
+        app:hintTextColor="@color/white"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addPhoneID"
+            android:inputType="phone"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:endIconMode="clear_text"
+        app:hintTextColor="@color/white"
+        android:hint="الاسم"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addnameID"
+            android:inputType="text"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+    
+    
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:layout_marginTop="22dp"
+    android:orientation="horizontal">
+
+
+    <Button
+
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_height="wrap_content"
+        android:text="صورة المندوب"
+        android:textColor="@color/white"
+        android:id="@+id/chooseImageID" />
+</LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="15dp"
+           />
+
+
+    <Button
+        android:id="@+id/addBtnID"
+        android:layout_width="match_parent"
+        android:textColor="#ffffff"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="20dp"
+        android:text="حفظ"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="24dp"
+        />
+
+
+</LinearLayout>
+</ScrollView>

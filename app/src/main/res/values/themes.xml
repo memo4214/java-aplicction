@@ -1,0 +1,45 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BmpSVU" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">#414B87</item>
+        <item name="colorOnPrimary">#5c6bc0</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">#5c6bc0</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="fontFamily">@font/fontfile</item>
+        <item name="android:windowBackground">#3b5998</item>
+        <item name="appBackgroundColor">#3b5998</item>
+        <item name="appTextColor">#fff</item>
+        <item name="appTextColorLight">#FB0047</item>
+        <item name="editTextColor">#d3d3d3</item>
+        <item name="btnColor">#5c6bc0</item>
+        <item name="btnSecondColor">#414B87</item>
+        <item name="appTextColorHint">#d3d3d3</item>
+        <item name="buyInv">#5F1BA1</item>
+        <item name="selInv">#3D71CA</item>
+    </style>
+    <style name="spinnerList">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/spinner_drawable</item>
+
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginLeft">24dp</item>
+        <item name="android:layout_marginRight">24dp</item>
+
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:popupBackground">#414B87</item>
+        <item name="strokeColor">#fff</item>
+    </style>
+    <style name="Theme.BmpSVU" parent="Base.Theme.BmpSVU" />
+</resources>

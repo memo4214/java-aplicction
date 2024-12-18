@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="appBackgroundColor" format="color"/>
+    <attr name="appTextColor" format="color"/>
+    <attr name="appTextColorLight" format="color"/>
+    <attr name="editTextColor" format="color"/>
+    <attr name="btnColor" format="color"/>
+    <attr name="btnSecondColor" format="color"/>
+    <attr name="appTextColorHint" format="color"/>
+    <attr name="buyInv" format="color"/>
+    <attr name="selInv" format="color"/>
+</resources>

@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:id="@+id/sv"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MndobComActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="إدخال مبيعات مندوب وحساب العمولة"
+            android:textSize="24dp"
+            android:background="?btnSecondColor"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="?editTextColor"
+            android:padding="5dp"
+            android:id="@+id/title1"
+            />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1.5"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView 
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="حدد مندوب:"
+            android:textColor="@color/white"
+            android:textSize="22dp"/>
+
+        
+        <Spinner
+            android:layout_width="match_parent"
+            style="@style/spinnerList"
+            android:padding="20dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/chooseAdvSpinnID"
+            android:layout_marginTop="5dp"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/imageRegionLnID"
+            android:visibility="gone"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+        <TextView 
+            android:textSize="20dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="المنطقة:"
+            />
+        <TextView
+            android:id="@+id/regionTvID"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:gravity="start"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:singleLine="true"
+            android:text="الوسطى"
+            tools:ignore="Deprecated" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:elevation="12dp"
+            android:id="@+id/view2"
+            android:visibility="gone"
+            android:layout_marginTop="18dp"
+            android:layout_gravity="center_horizontal"
+            app:cardCornerRadius="60dp"
+            android:layout_centerHorizontal="true"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9">
+            <ImageView
+                android:layout_height="120dp"
+                android:layout_width="120dp"
+                android:id="@+id/advPhotoID"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                android:src="@drawable/ic_launcher_foreground"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true">
+            </ImageView>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/salesLnID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:text="الشهر"
+                    android:textSize="16dp"/>
+
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    style="@style/spinnerList"
+                    android:padding="20dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/monthyearID"
+                    android:layout_marginTop="5dp"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="18dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="السنة"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"/>
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    style="@style/spinnerList"
+                    android:padding="20dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/saleYearID"
+                    android:layout_marginTop="5dp"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="إدخال المبيعات:"
+                android:textStyle="bold"
+                android:layout_marginTop="18dp"
+                android:textSize="25dp"
+                android:textColor="@color/white"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                app:endIconMode="clear_text"
+                android:hint="المنطقة الشرقية"
+                app:hintTextColor="@color/white"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/eastID"
+                    android:inputType="number"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal">
+
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    app:endIconMode="clear_text"
+                    android:inputType="number"
+                    android:hint="المنطقة الشمالية"
+                    app:hintTextColor="@color/white"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nothID"
+                        android:inputType="number"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/white"
+                android:hint="المنطقة الجنوبية"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/southID"
+                    android:inputType="number"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+                   </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    app:endIconMode="clear_text"
+                    app:hintTextColor="@color/white"
+                    android:hint="المنطقة الساحلية"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/westID"
+                        android:inputType="number"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/white"
+                android:hint="لبنان"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lebanonID"
+                    android:inputType="number"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+
+            <Button
+                android:id="@+id/salescomBTNID"
+                android:layout_width="match_parent"
+                android:textColor="#ffffff"
+                android:layout_marginTop="18dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="20dp"
+                android:text="متابعة..."
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="15dp"/>
+
+
+        <LinearLayout
+            android:id="@+id/comSallLV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:showDividers="middle"
+            android:visibility="gone"
+
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/res1ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="رقم المندوب:"
+                android:textSize="22dp"
+                android:paddingHorizontal="25dp"
+                android:layout_marginTop="15dp"></TextView>
+
+            <TextView
+                android:id="@+id/res2ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="اسم المندوب:"
+                android:textSize="22dp"
+                android:paddingHorizontal="25dp"
+                android:layout_marginTop="15dp"></TextView>
+            <TextView
+                android:id="@+id/res3ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="المنطقة:"
+                android:textSize="22dp"
+                android:paddingHorizontal="25dp"
+                android:layout_marginTop="15dp"></TextView>
+            <TextView
+                android:id="@+id/res4ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="تاريخ التسجيل:"
+                android:textSize="22dp"
+                android:paddingHorizontal="25dp"
+                android:layout_marginTop="15dp"></TextView>
+
+            <TextView
+                android:id="@+id/res5ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="الشهر:"
+                android:textSize="22dp"
+                android:paddingHorizontal="25dp"
+                android:layout_marginTop="15dp"></TextView>
+
+            <TextView
+                android:id="@+id/res6ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="السنة:"
+                android:textSize="22dp"
+                android:paddingHorizontal="25dp"
+                android:layout_marginTop="15dp"></TextView>
+
+            <TextView
+                android:id="@+id/res7ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="المنطقة الشمالية:"
+                android:textSize="22dp"
+                android:paddingHorizontal="25dp"
+                android:layout_marginTop="15dp"></TextView>
+
+            <TextView
+                android:id="@+id/res8ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="المنطقة الجنوبية:"
+                android:textSize="22dp"
+                android:paddingHorizontal="25dp"
+                android:layout_marginTop="15dp"></TextView>
+
+            <TextView
+                android:id="@+id/res9ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="المنطقة الساحلية:"
+                android:textSize="22dp"
+                android:paddingHorizontal="25dp"
+                android:layout_marginTop="15dp"></TextView>
+
+
+            <TextView
+                android:id="@+id/res10ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="المنطقة الشرقية:"
+                android:textSize="22dp"
+                android:paddingHorizontal="25dp"
+                android:layout_marginTop="15dp"></TextView>
+
+            <TextView
+                android:id="@+id/res11ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="لبنان:"
+                android:textSize="22dp"
+                android:paddingHorizontal="25dp"
+                android:layout_marginTop="15dp"></TextView>
+
+
+
+
+
+            <Button
+                android:id="@+id/salecommBtnID2"
+                android:layout_width="match_parent"
+                android:textColor="#ffffff"
+                android:layout_marginTop="18dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="20dp"
+                android:text="نخزين العمولة"
+                />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</ScrollView>
